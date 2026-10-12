@@ -5,9 +5,6 @@
 <meta name="theme-color" content="#0A84FF">
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head><body>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* Tata letak: satu kolom seperti buku catatan lapangan. Strip minggu menjadi navigasi utama; panel putih hanya untuk daftar catatan. */
 :root{
@@ -15,9 +12,9 @@
   --accent:#2250D9;--accent-ink:#FFFFFF;--accent-soft:#DCE5FB;--hl:#F4C430;
   --good:#1B7F52;--warn:#9A5B00;--bad:#BC3434;
   --c1:#2250D9;--c2:#0E8A7A;--c3:#C2570C;--c4:#8A3FC4;--c5:#A67C00;--c6:#5F6B68;--c7:#C23B6A;
-  --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
-  --font-body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
-  --font-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --font-display:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --font-body:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --font-mono:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -147,7 +144,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
 .cal .hd{font:500 .68rem var(--font-mono);text-align:center;color:var(--ink-2);padding-bottom:2px}
 .cell{aspect-ratio:1;max-width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;background:var(--lv,var(--surface));color:var(--ink);display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:4px 6px;text-align:left}
-.cell .cd{font:600 .85rem var(--font-display)}
+.cell .dn{font:600 .85rem var(--font-display)}
 .cell .cn{font:500 .66rem var(--font-mono)}
 .cell.today{box-shadow:inset 0 0 0 2px var(--hl)}
 .legend{display:flex;align-items:center;gap:4px;font:500 .68rem var(--font-mono);color:var(--ink-2);margin-top:8px}
@@ -234,20 +231,19 @@ textarea{resize:vertical}
 .db{display:grid;grid-template-columns:22cqw 1fr 14cqw;align-items:center;gap:1.4cqw;margin-bottom:1.2cqw}
 .db .t{height:1.1cqw;border-radius:1cqw;background:#23314F;overflow:hidden}.db .t i{display:block;height:100%;background:linear-gradient(90deg,#D4AF37,#F0D98A)}.db small{color:#9AA8C2;font-size:1.2cqw}
 .cds{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw}
-.cd{background:#16233F;border:1px solid #2A3B5F;border-radius:1.2cqw;padding:1.8cqw}
-.cd h3{font:700 1.8cqw var(--font-display);margin:0}.cd .m{color:#D4AF37;font-size:1.1cqw;margin:.3cqw 0 1cqw}.cd p{margin:0 0 .8cqw;font-size:1.3cqw;color:#DCE3F1}
+.dcd{background:#16233F;border:1px solid #2A3B5F;border-radius:1.2cqw;padding:1.8cqw}
+.dcd h3{font:700 1.8cqw var(--font-display);margin:0}.dcd .m{color:#D4AF37;font-size:1.1cqw;margin:.3cqw 0 1cqw}.dcd p{margin:0 0 .8cqw;font-size:1.3cqw;color:#DCE3F1}
 .ph{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqw}.ph figure{margin:0}
 .ph img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:1cqw;display:block}.ph figcaption{font-size:1.1cqw;color:#9AA8C2;margin-top:.3cqw}
 .fl{display:flex;gap:1.2cqw;padding:1cqw 0;border-bottom:1px solid #2A3B5F}.fl b{color:#D4AF37}.fl small{display:block;color:#9AA8C2}
 .sl .pg{position:absolute;right:3cqw;bottom:1.6cqw;font-size:1.1cqw;color:#9AA8C2}
-:root{--bg:#DCE6F8;--surface:rgba(255,255,255,.55);--surface-2:rgba(255,255,255,.42);--ink:#0B1220;--ink-2:#4A5470;--line:rgba(110,125,165,.22);--accent:#007AFF;--accent-ink:#fff;--accent-soft:rgba(0,122,255,.14);--hl:#FFD60A;--good:#1FAF4B;--warn:#E07B00;--bad:#E5342B;--c1:#007AFF;--c2:#30B0C7;--c3:#FF9500;--c4:#AF52DE;--c5:#E0B400;--c6:#8E8E93;--c7:#FF2D55;--glass:rgba(255,255,255,.5);--glass-hi:rgba(255,255,255,.9);--glass-strong:rgba(250,252,255,.78);--glass-in:rgba(255,255,255,.55);--glass-brd:rgba(255,255,255,.7);--glass-sh:0 10px 36px rgba(40,55,110,.14);--b1:rgba(120,170,255,.85);--b2:rgba(255,170,210,.75);--b3:rgba(140,235,210,.75);--b4:rgba(190,170,255,.8);color-scheme:light;--font-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;--font-body:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif;--font-mono:ui-rounded,'SF Pro Rounded',-apple-system,system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060913;--surface:rgba(30,36,56,.5);--surface-2:rgba(255,255,255,.08);--ink:#F4F6FB;--ink-2:#A5AEC6;--line:rgba(255,255,255,.12);--accent:#0A84FF;--accent-ink:#fff;--accent-soft:rgba(10,132,255,.22);--hl:#FFD60A;--good:#30D158;--warn:#FF9F0A;--bad:#FF453A;--c1:#0A84FF;--c2:#40C8E0;--c3:#FF9F0A;--c4:#BF5AF2;--c5:#FFD60A;--c6:#98989D;--c7:#FF375F;--glass:rgba(34,40,62,.5);--glass-hi:rgba(255,255,255,.18);--glass-strong:rgba(24,28,46,.78);--glass-in:rgba(255,255,255,.07);--glass-brd:rgba(255,255,255,.14);--glass-sh:0 12px 40px rgba(0,0,0,.45);--b1:rgba(40,90,255,.55);--b2:rgba(170,60,230,.4);--b3:rgba(0,170,170,.33);--b4:rgba(255,80,120,.25);color-scheme:dark;}}
+:root{--bg:#DCE6F8;--surface:rgba(255,255,255,.3);--surface-2:rgba(255,255,255,.24);--ink:#0B1220;--ink-2:#4A5470;--line:rgba(110,125,165,.22);--accent:#007AFF;--accent-ink:#fff;--accent-soft:rgba(0,122,255,.14);--hl:#FFD60A;--good:#1FAF4B;--warn:#E07B00;--bad:#E5342B;--c1:#007AFF;--c2:#30B0C7;--c3:#FF9500;--c4:#AF52DE;--c5:#E0B400;--c6:#8E8E93;--c7:#FF2D55;--glass:rgba(255,255,255,.24);--glass-hi:rgba(255,255,255,.62);--glass-strong:rgba(250,252,255,.52);--glass-in:rgba(255,255,255,.3);--glass-brd:rgba(255,255,255,.7);--glass-sh:0 10px 36px rgba(40,55,110,.14);--b1:rgba(120,170,255,.85);--b2:rgba(255,170,210,.75);--b3:rgba(140,235,210,.75);--b4:rgba(190,170,255,.8);color-scheme:light;--font-display:'Helvetica Neue',Helvetica,Arial,sans-serif;--font-body:'Helvetica Neue',Helvetica,Arial,sans-serif;--font-mono:'Helvetica Neue',Helvetica,Arial,sans-serif;--surface:rgba(30,36,56,.28);--surface-2:rgba(255,255,255,.08);--ink:#F4F6FB;--ink-2:#A5AEC6;--line:rgba(255,255,255,.12);--accent:#0A84FF;--accent-ink:#fff;--accent-soft:rgba(10,132,255,.22);--hl:#FFD60A;--good:#30D158;--warn:#FF9F0A;--bad:#FF453A;--c1:#0A84FF;--c2:#40C8E0;--c3:#FF9F0A;--c4:#BF5AF2;--c5:#FFD60A;--c6:#98989D;--c7:#FF375F;--glass:rgba(34,40,62,.24);--glass-hi:rgba(255,255,255,.15);--glass-strong:rgba(24,28,46,.5);--glass-in:rgba(255,255,255,.05);--glass-brd:rgba(255,255,255,.14);--glass-sh:0 12px 40px rgba(0,0,0,.45);--b1:rgba(40,90,255,.55);--b2:rgba(170,60,230,.4);--b3:rgba(0,170,170,.33);--b4:rgba(255,80,120,.25);color-scheme:dark;}}
 :root[data-theme="dark"]{--bg:#060913;--surface:rgba(30,36,56,.5);--surface-2:rgba(255,255,255,.08);--ink:#F4F6FB;--ink-2:#A5AEC6;--line:rgba(255,255,255,.12);--accent:#0A84FF;--accent-ink:#fff;--accent-soft:rgba(10,132,255,.22);--hl:#FFD60A;--good:#30D158;--warn:#FF9F0A;--bad:#FF453A;--c1:#0A84FF;--c2:#40C8E0;--c3:#FF9F0A;--c4:#BF5AF2;--c5:#FFD60A;--c6:#98989D;--c7:#FF375F;--glass:rgba(34,40,62,.5);--glass-hi:rgba(255,255,255,.18);--glass-strong:rgba(24,28,46,.78);--glass-in:rgba(255,255,255,.07);--glass-brd:rgba(255,255,255,.14);--glass-sh:0 12px 40px rgba(0,0,0,.45);--b1:rgba(40,90,255,.55);--b2:rgba(170,60,230,.4);--b3:rgba(0,170,170,.33);--b4:rgba(255,80,120,.25);color-scheme:dark;}
 /* ===== Liquid glass ===== */
 body{background:var(--bg);min-height:100vh;font-size:16px;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:-20vmax;z-index:-1;pointer-events:none;background:radial-gradient(40vmax 40vmax at 14% 10%,var(--b1),transparent 62%),radial-gradient(46vmax 46vmax at 92% 18%,var(--b2),transparent 62%),radial-gradient(52vmax 52vmax at 72% 96%,var(--b3),transparent 62%),radial-gradient(42vmax 42vmax at 4% 88%,var(--b4),transparent 62%);animation:drift 30s ease-in-out infinite alternate}
 @keyframes drift{to{transform:translate3d(2.5vmax,-2vmax,0) scale(1.07)}}
-.panel,.note,.day,.cell,.stats,.fu,.sync,.tabs,.clock,.seg,.chip,.cd{background:var(--glass);-webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);border:1px solid var(--glass-brd);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.06),var(--glass-sh)}
+.panel,.note,.day,.stats,.fu,.sync,.tabs,.clock,.seg,.chip{background:var(--glass);-webkit-backdrop-filter:blur(32px) saturate(210%);backdrop-filter:blur(32px) saturate(210%);border:1px solid var(--glass-brd);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.06),var(--glass-sh)}
 .panel{border-radius:26px;padding:4px 18px}.panel.pad{padding:18px}
 .note{border-radius:20px;border:1px solid var(--glass-brd)}.note.warn{background:color-mix(in srgb,var(--warn) 22%,var(--glass))}
 .stats{border-radius:24px;gap:0;overflow:hidden}.stat{background:transparent;box-shadow:inset 0 0 0 .5px var(--line)}
@@ -269,7 +265,7 @@ body::before{content:"";position:fixed;inset:-20vmax;z-index:-1;pointer-events:n
 input,select,textarea{background:var(--glass-in);border:1px solid var(--glass-brd);border-radius:16px;box-shadow:inset 0 1px 2px rgba(30,40,90,.08)}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
 .overlay{background:rgba(10,14,30,.32);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.sheet{background:var(--glass-strong);-webkit-backdrop-filter:blur(44px) saturate(190%);backdrop-filter:blur(44px) saturate(190%);border:1px solid var(--glass-brd);border-radius:32px 32px 0 0;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 -10px 50px rgba(20,30,80,.25)}
+.sheet{background:var(--glass-strong);-webkit-backdrop-filter:blur(50px) saturate(210%);backdrop-filter:blur(50px) saturate(210%);border:1px solid var(--glass-brd);border-radius:32px 32px 0 0;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 -10px 50px rgba(20,30,80,.25)}
 @media (min-width:700px){.sheet{border-radius:32px}}
 .aibox{border-radius:18px}.toast{background:var(--glass-strong);color:var(--ink);border:1px solid var(--glass-brd);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);box-shadow:var(--glass-sh)}
 .pill{background:var(--hl);border-radius:999px}.track{border-radius:99px}.fill{border-radius:99px;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 60%,#fff))}
@@ -285,6 +281,12 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);
 .entry{grid-template-columns:52px minmax(0,1fr);position:relative;padding-right:34px}
 .ebtn{position:absolute;top:12px;right:0;width:26px;height:26px;border-radius:50%;padding:0;display:grid;place-items:center;font-size:.8rem;line-height:1;color:var(--ink-2);background:var(--glass);border:1px solid var(--glass-brd);box-shadow:inset 0 1px 0 rgba(255,255,255,.45);transition:color .2s,background .2s,transform .2s}
 .ebtn:hover{color:var(--accent);background:var(--glass-hi)}.ebtn:active{transform:scale(.92)}
+.cell{aspect-ratio:auto;min-height:86px;justify-content:flex-start;align-items:stretch;gap:5px;padding:6px 7px;border:1px solid var(--glass-brd);border-radius:14px;background:var(--lv,var(--surface));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.cell.today{box-shadow:inset 0 0 0 2px var(--hl)}
+.ctop{display:flex;justify-content:space-between;align-items:baseline}
+.cev{display:flex;flex-direction:column;gap:2px;min-width:0}
+.cev span{font:500 .6rem/1.25 var(--font-body);color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:480px){.cell{min-height:64px;padding:4px 5px}.cev span:nth-child(n+2){display:none}.cev span{font-size:.54rem}}
 </style>
 
 <div class="app">
@@ -369,8 +371,11 @@ var EN={'Catatan kunjungan toko':'Store visit log','Jurnal Trainer Executive':'E
 'RINGKASAN':'SUMMARY','AKTIVITAS UTAMA':'KEY ACTIVITIES','TINDAK LANJUT DAN RENCANA':'FOLLOW-UP AND PLANS','Hasil':'Results','Kunjungan':'Visit',
 'Training produk':'Product training','Coaching 1-on-1':'1-on-1 coaching','Penilaian staf':'Staff assessment','Briefing & rapat':'Briefing & meetings','Cek display & toko':'Display & store check','Administrasi & laporan':'Admin & reports','Perjalanan':'Travel',
 'Foto gagal dibaca':'Could not read photo','Siapkan file…':'Preparing file…','File gagal dibuat. Periksa koneksi internet.':'Could not build file. Check your internet.'};
-var WORDS=[[/jam kerja/g,'work hours'],[/\bjam\b/g,'h'],[/\baktivitas\b/g,'activities'],[/\bpeserta\b/g,'participants'],[/\btoko\b/g,'stores'],[/kunjungan/g,'visits'],[/dikunjungi/g,'visited'],[/tercatat/g,'logged'],[/belum selesai/g,'open'],[/terakhir/g,'last'],[/batas/g,'due'],[/terlambat/g,'overdue'],[/selesai/g,'done'],[/dicatat/g,'logged'],[/Minggu ke-/g,'Week '],[/Tindak lanjut/g,'Follow-up'],[/dari sebelumnya/g,'vs previous'],[/sama dengan sebelumnya/g,'same as previous'],[/foto/g,'photos'],[/catatan/g,'entries']];
-function T(s){if(LANG!=='en'||!s)return s;var v=EN[s];if(v)return v;if(/\d/.test(s)&&s.length<110){WORDS.forEach(function(w){s=s.replace(w[0],w[1])})}return s}
+Object.assign(EN,{"Jenis aktivitas dipakai sebagai pilihan saat mencatat dan untuk ringkasan per jenis. Hapus yang tidak Anda perlukan, atau tambah sendiri.": "Activity types are offered when logging and used for the per-type summary. Delete the ones you do not need, or add your own.", "Daftar kosong, jadi kolom jenis aktivitas disembunyikan dari formulir dan ringkasan. Tambahkan jenis di bawah bila ingin memakainya lagi.": "The list is empty, so the activity type field is hidden from the form and summaries. Add a type below to use it again.", "Daftar ini menjadi pilihan toko saat mencatat, dan area terisi otomatis. Tempel satu toko per baris. Tulis area setelah koma bila ada.": "This list becomes the store choices when logging, and the area fills in automatically. Paste one store per line. Write the area after a comma if there is one.", "Daftar masih kosong. Saat mencatat, nama toko diketik sendiri.": "The list is empty. When logging, you type the store name yourself.", "Atur halaman ini sesuai pekerjaan Anda. Perubahan langsung berlaku dan tidak mengubah catatan lama.": "Adjust this page to your work. Changes apply immediately and do not change past entries.", "Belum ada tindak lanjut. Isi kolom tindak lanjut saat mencatat aktivitas, dan daftarnya muncul di sini.": "No follow-ups yet. Fill in the follow-up field when logging an activity and the list appears here.", "Semua tindak lanjut sudah selesai.": "All follow-ups are done.", "Belum ada kunjungan toko pada periode ini.": "No store visits in this period.", "Belum ada data Anda untuk diekspor.": "You have no data to export yet.", "Catat aktivitas Anda dulu. Laporan tidak dibuat dari data contoh.": "Log your own activities first. Reports are not built from sample data.", "Contoh data tidak dipakai untuk laporan": "Sample data is not used for reports", "Ini data contoh. Catat aktivitas Anda sendiri untuk mengubahnya.": "This is sample data. Log your own activities to replace it.", "Isi Nama di Pengaturan dulu agar data terpisah per trainer.": "Fill in your Name under Settings first so data stays separate per trainer.", "Catatan belum tersimpan. Periksa koneksi, lalu coba lagi.": "Entry not saved. Check your connection and try again.", "Perubahan belum tersimpan. Coba lagi.": "Changes not saved. Try again.", "Laporan belum tersimpan. Coba lagi.": "Report not saved. Try again.", "Gagal menghapus. Coba lagi.": "Could not delete. Try again.", "File gagal disimpan": "File could not be saved", "Unduhan tidak tersedia di tampilan ini. Gunakan tombol Salin.": "Downloads are not available here. Use the Copy button.", "Pilih teks lalu salin manual": "Select the text and copy it manually", "Jam selesai harus setelah jam mulai.": "End time must be after start time.", "Pilih atau isi nama toko.": "Choose or enter a store name.", "Tulis nama toko dulu.": "Enter a store name first.", "Jenis itu sudah ada": "That type already exists", "Semua toko itu sudah ada di daftar": "All those stores are already in the list", "Data belum diterima server. Cek deployment Code.gs.": "The server did not receive the data. Check the Code.gs deployment.", "Server tidak membalas JSON. Pastikan Web App di-deploy dengan akses \"Anyone\" dan memakai versi Code.gs terbaru.": "The server did not reply with JSON. Make sure the Web App is deployed with \"Anyone\" access and uses the latest Code.gs.", "tidak bisa menjangkau server. Cek link /exec dan pastikan akses Web App \"Anyone\"": "cannot reach the server. Check the /exec link and make sure Web App access is \"Anyone\"", "Penyimpanan perangkat penuh. Aktifkan server atau hapus foto lama.": "Device storage is full. Enable the server or delete old photos.", "Link server kosong": "Server link is empty", "File .pptx diunduh": ".pptx file downloaded", "File diunduh. Buka dengan Keynote, lalu File > Simpan untuk jadi .key": "File downloaded. Open it in Keynote, then choose File > Save to make a .key", "Foto tidak dapat dimuat": "Photo could not be loaded", "Siapkan file… foto sedang diambil dari server": "Preparing file… fetching photos from the server", "Tulis dengan kalimat biasa": "Write in plain sentences", "Contoh: kemarin training layanan purna jual di Bintaro, 9 orang, jam 9 sampai 11. Minggu depan kirim materi ke SPV.": "Example: yesterday after-sales training at Bintaro, 9 people, 9 to 11. Next week send the materials to the supervisor.", "Apa yang dibahas atau dikerjakan": "What was discussed or done", "Apa hasilnya, apa yang perlu dicatat": "The outcome, and anything worth noting", "Nama lengkap": "Full name", "Durasi (menit)": "Duration (minutes)", "mis. Jabodetabek": "e.g. Greater Jakarta", "Jenis baru, mis. Pelatihan toko": "New type, e.g. Store training", "Jenis laporan": "Report type", "Status tindak lanjut": "Follow-up status", "Tandai selesai": "Mark done", "Tandai belum selesai": "Mark not done", "Hapus semua jenis": "Delete all types", "Ya, hapus semua": "Yes, delete all", "Kembalikan jenis bawaan": "Restore default types", "Minggu berikutnya": "Next week", "Minggu sebelumnya": "Previous week", "Periode berikutnya": "Next period", "Periode sebelumnya": "Previous period", "Kantor": "Office", "Lainnya": "Other", "Berhenti": "Stop", "Hari": "Day", "Kunjungan": "Visit", "Trainer Lapangan": "Field Trainer", "Rekap laporan mingguan": "Weekly report recap", "(belum ada)": "(none yet)", "(belum diisi)": "(not filled in)", "(tanpa nama toko)": "(no store name)", "(tanpa toko)": "(no store)", "(tidak ada)": "(none)", "belum ada catatan": "no entries yet", "peserta": "participants", "batas": "due", "selesai": "done", "belum": "open", "foto evidence": "evidence photos", "Selesai": "End", "Pengenalan lini produk terbaru": "Introduction to the latest product line", "Penilaian demo produk": "Product demo assessment", "Penilaian ulang demo produk": "Product demo reassessment", "Presentasi produk ke pelanggan": "Customer product presentation", "Membandingkan model untuk pelanggan baru": "Comparing models for new customers", "Membuka percakapan dengan pelanggan": "Opening a conversation with customers", "Briefing target mingguan": "Weekly target briefing", "Cek display dan materi promo": "Display and promo material check", "Cek kebersihan dan kelengkapan display": "Display cleanliness and completeness check", "Layanan purna jual": "After-sales service", "Layanan tambahan dan aksesori": "Add-on services and accessories", "Peserta bisa menjelaskan fitur utama. Dua orang masih ragu saat membandingkan model.": "Participants could explain the key features. Two people still hesitate when comparing models.", "Antusias tinggi, banyak pertanyaan soal paket layanan.": "High enthusiasm, many questions about service plans.", "Kedua staf lebih percaya diri. Perlu latihan menutup penjualan.": "Both staff are more confident. They need practice closing sales.", "Kedua staf lulus.": "Both staff passed.", "4 dari 6 staf lulus. 2 staf perlu mengulang.": "4 of 6 staff passed. 2 staff need to retake.", "Display lengkap. Dua label harga perlu diganti.": "Display is complete. Two price labels need replacing.", "Materi dipahami. Perlu contoh kasus pelanggan nyata.": "Material understood. Real customer cases are needed.", "Materi promo di meja depan belum terpasang.": "Promo material at the front desk is not installed yet.", "Satu staf sudah siap tampil mandiri.": "One staff member is ready to perform independently.", "Target dibagi per orang dan disetujui tim.": "Targets were split per person and approved by the team.", "Beri materi latihan presentasi untuk 2 staf lain": "Give presentation practice material to 2 other staff", "Jadwalkan penilaian ulang untuk 2 staf": "Schedule a reassessment for 2 staff", "Kirim ringkasan perbandingan model ke tim toko": "Send the model comparison summary to the store team", "Konfirmasi pemasangan materi promo ke SPV toko": "Confirm promo material installation with the store supervisor", "Minta toko mengganti 2 label harga": "Ask the store to replace 2 price labels", "Siapkan 3 contoh kasus pelanggan": "Prepare 3 customer case examples", "Toko Bekasi": "Bekasi Store", "Toko Bintaro": "Bintaro Store", "Toko Depok": "Depok Store", "Toko Kelapa Gading": "Kelapa Gading Store", "Toko Tangerang": "Tangerang Store", "Jakarta Utara": "North Jakarta", "Tangerang Selatan": "South Tangerang"});
+var PRE=[['Hapus jenis ','Delete type '],['Hapus ','Delete '],['Ambil ','Import ']];
+var WORDS=[[/\b1 aktivitas/g,'1 activity'],[/\b1 toko\b/g,'1 store'],[/\b1 peserta/g,'1 participant'],[/\b1 kunjungan/g,'1 visit'],[/\b1 foto/g,'1 photo'],[/dari catatan lama/g,'from past entries'],[/ditambahkan dari catatan Anda/g,'added from your entries'],[/ditambahkan/g,'added'],[/terbaru/g,'latest'],[/\bSelesai\b/g,'Done'],[/jam kerja/g,'work hours'],[/\bjam\b/g,'h'],[/\baktivitas\b/g,'activities'],[/\bpeserta\b/g,'participants'],[/\btoko\b/g,'stores'],[/kunjungan/g,'visits'],[/dikunjungi/g,'visited'],[/tercatat/g,'logged'],[/belum selesai/g,'open'],[/terakhir/g,'last'],[/batas/g,'due'],[/terlambat/g,'overdue'],[/selesai/g,'done'],[/dicatat/g,'logged'],[/Minggu ke-/g,'Week '],[/Tindak lanjut/g,'Follow-up'],[/dari sebelumnya/g,'vs previous'],[/sama dengan sebelumnya/g,'same as previous'],[/foto/g,'photos'],[/catatan/g,'entries']];
+function NT(s){return(s&&!isDemo())?'\u2060'+s:s}
+function T(s){if(s&&s.charCodeAt(0)===8288)return s.slice(1);if(LANG!=='en'||!s)return s;var v=EN[s];if(v)return v;for(var q=0;q<PRE.length;q++)if(s.indexOf(PRE[q][0])===0)return PRE[q][1]+T(s.slice(PRE[q][0].length));if(/\d/.test(s)&&s.length<110){WORDS.forEach(function(w){s=s.replace(w[0],w[1])})}return s}
 function applyPrefs(){
   var c=S.settings,r=document.documentElement;
   LANG=c.lang==='en'?'en':'id';LOC=LANG==='en'?'en-US':'id-ID';
@@ -628,17 +633,17 @@ function fuMeta(e){
 function fuBlock(e){
   var late=!e.fuDone&&e.fuDue&&e.fuDue<today();
   return h('div',{class:'fu'+(e.fuDone?' done':'')+(late?' late':'')},checkBtn(e),
-    h('div',null,h('div',{class:'fu-t'},e.followup),h('div',{class:'fu-m'},fuMeta(e))));
+    h('div',null,h('div',{class:'fu-t'},NT(e.followup)),h('div',{class:'fu-m'},fuMeta(e))));
 }
 function entryRow(e){
   var d=dur(e);
   return h('div',{class:'entry'},
     h('div',{class:'time'},h('span',null,e.start||'—'),e.end?h('span',null,'–'+e.end):null),
     h('div',null,
-      h('h3',null,e.store||'(tanpa nama toko)'),
-      h('div',{class:'meta'},chipType(e.type),e.participants?h('span',null,e.participants+' peserta'):null,d?h('span',null,fmtJam(d)):null,e.area?h('span',null,e.area):null),
-      e.topic?h('p',{class:'topic'},e.topic):null,
-      e.result?h('p',{class:'res'},e.result):null,
+      h('h3',null,e.store?NT(e.store):'(tanpa nama toko)'),
+      h('div',{class:'meta'},chipType(e.type),e.participants?h('span',null,e.participants+' peserta'):null,d?h('span',null,fmtJam(d)):null,e.area?h('span',null,NT(e.area)):null),
+      e.topic?h('p',{class:'topic'},NT(e.topic)):null,
+      e.result?h('p',{class:'res'},NT(e.result)):null,
       e.followup?fuBlock(e):null,evThumbs(e.evidence)),
     h('button',{class:'ebtn',type:'button',title:T('Edit aktivitas'),'aria-label':'Edit aktivitas',onclick:function(){openSheet(e.id)}},'✎'));
 }
@@ -720,7 +725,16 @@ function vMinggu(){
 }
 
 /* ---------- tampilan: bulan ---------- */
-function calendar(ym,st){
+function evLines(items){
+  if(!items||!items.length)return null;
+  var seen=new Map();
+  items.forEach(function(e){var k=typesOn()&&e.type?T(e.type):(e.store?NT(e.store):T('Kunjungan'));seen.set(k,(seen.get(k)||0)+1)});
+  var ks=Array.from(seen.keys()),lines=ks.slice(0,2).map(function(k){return h('span',null,k+(seen.get(k)>1?' ×'+seen.get(k):''))});
+  if(ks.length>2)lines.push(h('span',null,'+'+(ks.length-2)));
+  return h('div',{class:'cev'},lines);
+}
+function calendar(ym,st,list){
+  var by={};(list||[]).forEach(function(e){(by[e.date]=by[e.date]||[]).push(e)});
   var lead=(parseD(ym+'-01').getDay()+6)%7,days=new Date(+ym.slice(0,4),+ym.slice(5,7),0).getDate();
   var el=h('div',{class:'cal'});
   DN.forEach(function(n){el.append(h('div',{class:'hd'},n))});
@@ -733,7 +747,7 @@ function calendar(ym,st){
       style:'--lv:'+(PCT[lv]?'color-mix(in srgb,var(--accent) '+PCT[lv]+'%,var(--surface))':'var(--surface)'),
       'aria-label':longDate(ds)+(v?': '+v.n+' aktivitas'+(v.min?', '+fmtJam(v.min):''):': kosong'),
       onclick:function(){S.day=ds;setTab('harian')}},
-      h('span',{class:'cd'},d),v?h('span',{class:'cn'},v.n+'×'):null));
+      h('div',{class:'ctop'},h('span',{class:'dn'},d),v?h('span',{class:'cn'},v.n+'×'):null),evLines(by[ds])));
   })(d)}
   return el;
 }
@@ -762,7 +776,7 @@ function vBulan(){
   [0,14,28,42,55].forEach(function(p){legend.append(h('i',{style:'--lv:'+(p?'color-mix(in srgb,var(--accent) '+p+'%,var(--surface))':'var(--surface)')}))});
   legend.append('Banyak jam');
   put(root,tiles(st,prev.count?prev:null),
-    sec('Kalender kerja','ketuk tanggal untuk membuka'),h('div',{class:'panel pad'},calendar(ym,st),legend),
+    sec('Kalender kerja','ketuk tanggal untuk membuka'),h('div',{class:'panel pad'},calendar(ym,st,list),legend),
     sec('Per minggu'),h('div',{class:'panel pad'},barRows(wItems)),
     typesOn()||isDemo()?sec('Jenis aktivitas'):null,typesOn()||isDemo()?h('div',{class:'panel pad'},barRows(sortedMap(st.types))):null,
     h('div',{class:'row',style:'margin-top:20px'},
@@ -773,7 +787,7 @@ function vBulan(){
 /* ---------- tampilan: tindak lanjut ---------- */
 function fuItem(e){
   return h('div',{class:'fuitem'+(e.fuDone?' done':'')},checkBtn(e),
-    h('div',null,h('div',{class:'t'},e.followup),
+    h('div',null,h('div',{class:'t'},NT(e.followup)),
       h('div',{class:'m'},(e.store||'-')+' · dicatat '+shortDate(e.date)+(e.fuDue?' · batas '+shortDate(e.fuDue):''))),
     h('button',{class:'btn ghost sm',type:'button',onclick:function(){openSheet(e.id)}},'Buka'));
 }
@@ -841,6 +855,7 @@ function sampleErr(code){
 }
 function summaryText(list){
   var st=stats(list);
+  if(LANG==='en'){var hr=(st.min/60).toLocaleString(LOC,{maximumFractionDigits:1});return st.count+(st.count===1?' activity, ':' activities, ')+(st.min?hr+' work hours logged, ':'')+st.visited+(st.visited===1?' store':' stores')+' visited, '+st.part+(st.part===1?' participant':' participants')}
   return st.count+' aktivitas, '+(st.min?(st.min/60).toLocaleString(LOC,{maximumFractionDigits:1})+' jam kerja tercatat, ':'')+st.visited+' toko dikunjungi, '+st.part+' peserta';
 }
 function buildPrompt(list,r){
@@ -866,15 +881,15 @@ function draftReport(list,r){
   out.push(T('Nama')+': '+(s.name||'-')+' | '+T('Jabatan')+': '+(s.role||'Trainer Lapangan')+' | '+T('Wilayah')+': '+(s.area||'-'));
   out.push(T('Periode')+': '+T(r.label),'',T('RINGKASAN'),'- '+T(summaryText(list)),'',T('AKTIVITAS UTAMA'));
   var by=new Map();
-  list.forEach(function(e){var k=e.store||'(tanpa toko)';if(!by.has(k))by.set(k,[]);by.get(k).push(e)});
+  list.forEach(function(e){var k=e.store||T('(tanpa toko)');if(!by.has(k))by.set(k,[]);by.get(k).push(e)});
   by.forEach(function(items,store){
     out.push(store);
-    items.forEach(function(e){out.push('- '+shortDate(e.date)+': '+T(typesOn()&&e.type?e.type:'Kunjungan')+(e.participants?', '+e.participants+' peserta':'')+(e.topic?'. '+e.topic:'')+(e.result?'. '+T('Hasil')+': '+e.result:'')+(e.evidence&&e.evidence.length?' ['+e.evidence.length+' '+T('foto evidence')+']':''))});
+    items.forEach(function(e){out.push('- '+shortDate(e.date)+': '+T(typesOn()&&e.type?e.type:'Kunjungan')+(e.participants?', '+e.participants+' '+T('peserta'):'')+(e.topic?'. '+e.topic:'')+(e.result?'. '+T('Hasil')+': '+e.result:'')+(e.evidence&&e.evidence.length?' ['+e.evidence.length+' '+T('foto evidence')+']':''))});
   });
   out.push('',T('TINDAK LANJUT DAN RENCANA'));
   var fu=list.filter(function(e){return e.followup});
   if(!fu.length)out.push('- '+T('Belum ada tindak lanjut tercatat.'));
-  fu.forEach(function(e){out.push('- ['+(e.fuDone?'selesai':'belum')+'] '+e.followup+' ('+e.store+(e.fuDue?', batas '+shortDate(e.fuDue):'')+')')});
+  fu.forEach(function(e){out.push('- ['+T(e.fuDone?'selesai':'belum')+'] '+e.followup+' ('+e.store+(e.fuDue?', '+T('batas')+' '+shortDate(e.fuDue):'')+')')});
   return out.join('\n');
 }
 async function generate(){
@@ -1011,7 +1026,7 @@ function slideEl(sl,i,n){
   if(sl.k==='end')body=h('div',null,h('h1',null,sl.title),h('p',{class:'sb'},sl.sub));
   if(sl.k==='stats')body=h('div',{class:'kps'},sl.items.map(function(x){return h('div',{class:'kp'},h('b',null,x[0]),h('span',null,x[1]),x[2]?h('i',null,x[2]):null)}));
   if(sl.k==='bars')body=h('div',null,sl.rows.map(function(x){return h('div',{class:'db'},h('span',null,x.l),h('div',{class:'t'},h('i',{style:'width:'+Math.round(x.p*100)+'%'})),h('small',null,x.v))}));
-  if(sl.k==='cards')body=h('div',{class:'cds'},sl.cards.map(function(x){return h('div',{class:'cd'},h('h3',null,x.h),h('div',{class:'m'},x.m),x.p?h('p',null,x.p):null,x.r?h('p',null,x.r):null)}));
+  if(sl.k==='cards')body=h('div',{class:'cds'},sl.cards.map(function(x){return h('div',{class:'dcd'},h('h3',null,x.h),h('div',{class:'m'},x.m),x.p?h('p',null,x.p):null,x.r?h('p',null,x.r):null)}));
   if(sl.k==='photos')body=h('div',{class:'ph'},sl.ph.map(function(x){return h('figure',null,h('img',{src:x.u,alt:x.c}),h('figcaption',null,x.c))}));
   if(sl.k==='list')body=h('div',null,sl.rows.map(function(x){return h('div',{class:'fl'},h('b',null,x.d?'✓':'○'),h('div',null,x.t,h('small',null,x.m)))}));
   put(el,hd,body,h('span',{class:'pg'},(i+1)+' / '+n));
@@ -1062,10 +1077,10 @@ async function exportPptx(forKeynote){
   try{await loadPptx()}catch(e){toast('File gagal dibuat. Periksa koneksi internet.');return}
   try{
     var P=new window.PptxGenJS();P.layout='LAYOUT_WIDE';P.title=D[0].title;
-    var G='D4AF37',INK='F3EFE6',MUT='9AA8C2',CARD='16233F',LN='2A3B5F',TF='Georgia',BF='Calibri';
+    var G='D4AF37',INK='F3EFE6',MUT='9AA8C2',CARD='16233F',LN='2A3B5F',TF='Helvetica',BF='Helvetica';
     for(var i=0;i<D.length;i++){
       var sl=D[i],s=P.addSlide();s.background={color:'0B1220'};
-      s.addShape(P.ShapeType.rect,{x:0,y:0,w:.14,h:7.5,fill:{color:G},line:{color:G}});
+      s.addText(' ',{shape:P.ShapeType.rect,x:0,y:0,w:.14,h:7.5,fill:{color:G},line:{color:G}});
       if(sl.k==='cover'){
         s.addText(sl.eb,{x:.9,y:2.0,w:11,h:.4,fontSize:14,bold:true,color:G,charSpacing:6,fontFace:BF});
         s.addText(sl.title,{x:.9,y:2.5,w:11.5,h:1.5,fontSize:44,bold:true,color:INK,fontFace:TF});
@@ -1078,21 +1093,19 @@ async function exportPptx(forKeynote){
       }
       s.addText(sl.eb,{x:.9,y:.45,w:8,h:.3,fontSize:11,bold:true,color:G,charSpacing:5,fontFace:BF});
       s.addText(sl.title,{x:.9,y:.75,w:11.5,h:.8,fontSize:30,bold:true,color:INK,fontFace:TF});
-      if(sl.k==='stats')sl.items.forEach(function(x,j){var X=.9+j*3.05;
-        s.addShape(P.ShapeType.roundRect,{x:X,y:2.3,w:2.85,h:2.6,fill:{color:CARD},line:{color:LN},rectRadius:.12});
-        s.addText(x[0],{x:X+.2,y:2.55,w:2.45,h:1,fontSize:38,bold:true,color:G,fontFace:TF});
-        s.addText(x[1],{x:X+.2,y:3.6,w:2.45,h:.4,fontSize:15,color:INK,fontFace:BF});
-        if(x[2])s.addText(x[2],{x:X+.2,y:4.1,w:2.45,h:.5,fontSize:10,color:MUT,fontFace:BF})});
+      if(sl.k==='stats')sl.items.forEach(function(x,j){var X=.9+j*3.05,runs=[{text:x[0],options:{fontSize:38,bold:true,color:G,fontFace:TF,breakLine:true,paraSpaceAfter:6}},{text:x[1],options:{fontSize:15,color:INK,fontFace:BF,breakLine:!!x[2],paraSpaceAfter:6}}];
+        if(x[2])runs.push({text:x[2],options:{fontSize:10,color:MUT,fontFace:BF}});
+        s.addText(runs,{shape:P.ShapeType.roundRect,x:X,y:2.3,w:2.85,h:2.6,fill:{color:CARD},line:{color:LN,width:1},rectRadius:.12,valign:'middle',align:'left',margin:[10,14,10,16]})});
       if(sl.k==='bars')sl.rows.forEach(function(x,j){var Y=1.95+j*.66;
         s.addText(x.l,{x:.9,y:Y-.1,w:3.6,h:.4,fontSize:14,color:INK,fontFace:BF});
-        s.addShape(P.ShapeType.rect,{x:4.6,y:Y,w:5.4,h:.22,fill:{color:'23314F'},line:{color:'23314F'}});
-        s.addShape(P.ShapeType.rect,{x:4.6,y:Y,w:Math.max(.1,5.4*x.p),h:.22,fill:{color:G},line:{color:G}});
+        s.addText(' ',{shape:P.ShapeType.rect,x:4.6,y:Y,w:5.4,h:.22,fill:{color:'23314F'},line:{color:'23314F'}});
+        s.addText(' ',{shape:P.ShapeType.rect,x:4.6,y:Y,w:Math.max(.1,5.4*x.p),h:.22,fill:{color:G},line:{color:G}});
         s.addText(x.v,{x:10.2,y:Y-.1,w:2.7,h:.4,fontSize:12,color:MUT,fontFace:BF})});
-      if(sl.k==='cards')sl.cards.forEach(function(x,j){var X=.9+j*4.0;
-        s.addShape(P.ShapeType.roundRect,{x:X,y:1.95,w:3.8,h:4.9,fill:{color:CARD},line:{color:LN},rectRadius:.1});
-        s.addText(x.h,{x:X+.2,y:2.1,w:3.4,h:.5,fontSize:16,bold:true,color:INK,fontFace:TF});
-        s.addText(x.m,{x:X+.2,y:2.6,w:3.4,h:.3,fontSize:10,color:G,fontFace:BF});
-        s.addText([{text:x.p+(x.p&&x.r?'\n\n':''),options:{color:'DCE3F1'}},{text:x.r,options:{color:MUT}}],{x:X+.2,y:3.0,w:3.4,h:3.7,fontSize:12,valign:'top',fontFace:BF,fit:'shrink'})});
+      if(sl.k==='cards')sl.cards.forEach(function(x,j){var X=.9+j*4.0,runs=[{text:x.h,options:{fontSize:16,bold:true,color:INK,fontFace:TF,breakLine:true,paraSpaceAfter:2}},{text:x.m,options:{fontSize:10,color:G,fontFace:BF,breakLine:!!(x.p||x.r),paraSpaceAfter:10}}];
+        if(x.p)runs.push({text:x.p,options:{fontSize:12,color:'DCE3F1',fontFace:BF,breakLine:!!x.r,paraSpaceAfter:8}});
+        if(x.r)runs.push({text:x.r,options:{fontSize:12,color:MUT,fontFace:BF}});
+        var lines=Math.ceil((x.p||'').length/38)+Math.ceil((x.r||'').length/38),H=Math.max(2.1,Math.min(4.9,1.45+lines*.26));
+        s.addText(runs,{shape:P.ShapeType.roundRect,x:X,y:1.95,w:3.8,h:H,fill:{color:CARD},line:{color:LN,width:1},rectRadius:.1,valign:'top',align:'left',margin:[14,16,12,16]})});
       if(sl.k==='list')sl.rows.forEach(function(x,j){var Y=1.95+j*.8;
         s.addText(x.d?'✓':'○',{x:.9,y:Y,w:.4,h:.4,fontSize:16,bold:true,color:G});
         s.addText([{text:x.t+'\n',options:{color:INK,fontSize:14}},{text:x.m,options:{color:MUT,fontSize:10}}],{x:1.4,y:Y-.1,w:11,h:.7,fontFace:BF,valign:'top',fit:'shrink'})});
@@ -1100,7 +1113,7 @@ async function exportPptx(forKeynote){
         var ds=await driveData(sl.ph.map(function(x){return x.u}));
         for(var j=0;j<sl.ph.length;j++){var X=.9+(j%3)*4.0,Y=1.85+Math.floor(j/3)*2.7,d=ds[j];
           if(d)s.addImage({data:d,x:X,y:Y,w:3.8,h:2.25,sizing:{type:'cover',w:3.8,h:2.25}});
-          else{s.addShape(P.ShapeType.rect,{x:X,y:Y,w:3.8,h:2.25,fill:{color:CARD},line:{color:LN}});s.addText('Foto tidak dapat dimuat',{x:X,y:Y+.9,w:3.8,h:.4,fontSize:10,color:MUT,align:'center'})}
+          else s.addText(T('Foto tidak dapat dimuat'),{shape:P.ShapeType.rect,x:X,y:Y,w:3.8,h:2.25,fill:{color:CARD},line:{color:LN},fontSize:10,color:MUT,align:'center',valign:'middle',fontFace:BF})
           s.addText(sl.ph[j].c,{x:X,y:Y+2.25,w:3.8,h:.3,fontSize:10,color:MUT,fontFace:BF})}}
       s.addText((i+1)+' / '+D.length,{x:11.6,y:7.05,w:1.3,h:.3,fontSize:10,color:MUT,align:'right',fontFace:BF});
     }
@@ -1150,7 +1163,7 @@ function openSheet(id,preset){
     var armed=false;
     delBtn=h('button',{class:'btn danger',type:'button',onclick:async function(ev){
       var b=ev.currentTarget;
-      if(!armed){armed=true;b.textContent='Ya, hapus catatan ini';return}
+      if(!armed){armed=true;b.textContent=T('Ya, hapus catatan ini');return}
       try{await removeEntry(id);closeSheet();toast('Catatan dihapus')}catch(x){toast('Gagal menghapus. Coba lagi.')}
     }},'Hapus');
   }
@@ -1219,11 +1232,11 @@ async function submitSheet(ev){
   var g=function(id){return $(id).value.trim()};
   var err=$('sheet-err');err.textContent='';
   var start=g('f-start'),end=g('f-end');
-  if(start&&end&&toMin(end)<=toMin(start)){err.textContent='Jam selesai harus setelah jam mulai.';return}
+  if(start&&end&&toMin(end)<=toMin(start)){err.textContent=T('Jam selesai harus setelah jam mulai.');return}
   var old=S.sheet&&S.sheet.id?S.entries.find(function(x){return x.id===S.sheet.id}):null;
   var sel=$('f-store-sel');
   var store=sel&&sel.value&&sel.value!=='__other'?sel.value:g('f-store');
-  if(!store){err.textContent='Pilih atau isi nama toko.';return}
+  if(!store){err.textContent=T('Pilih atau isi nama toko.');return}
   var fu=g('f-fu');
   var data={
     date:g('f-date'),store:store,area:g('f-area'),type:$('f-type')?g('f-type'):'',start:start,end:end,
@@ -1240,7 +1253,7 @@ async function submitSheet(ev){
     closeSheet();toast('Catatan tersimpan');render();
   }catch(e){
     btn.disabled=false;
-    err.textContent='Catatan belum tersimpan. Periksa koneksi, lalu coba lagi.';
+    err.textContent=T('Catatan belum tersimpan. Periksa koneksi, lalu coba lagi.');
   }
 }
 async function aiFill(){
@@ -1388,7 +1401,7 @@ function vPengaturan(){
 var VIEWS={harian:vHarian,minggu:vMinggu,bulan:vBulan,tindak:vTindak,laporan:vLaporan,pengaturan:vPengaturan};
 function renderTop(){
   var s=$('sync'),has=!!SRV(),k=S.sync;
-  var msg=!S.ready?'Memuat…':!has?'Tersimpan di peramban ini saja':k==='busy'?'Menyinkronkan…':k==='err'?'Gagal sinkron, data aman di perangkat'+(S.syncErr?' ('+S.syncErr+')':''):'Tersinkron ke server';
+  var msg=!S.ready?'Memuat…':!has?'Tersimpan di peramban ini saja':k==='busy'?'Menyinkronkan…':k==='err'?T('Gagal sinkron, data aman di perangkat')+(S.syncErr?' ('+T(S.syncErr)+')':''):'Tersinkron ke server';
   s.className='sync'+(has&&k!=='err'?'':' warn');
   s.replaceChildren(h('i'),T(msg));s.title=T(msg);
   var br=document.querySelector('.brand');br.replaceChildren(h('small',null,'Catatan kunjungan toko'),T('Jurnal Trainer Executive'));
